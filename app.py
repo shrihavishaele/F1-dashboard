@@ -180,14 +180,14 @@ if df is not None:
             with col1:
                 wins = df_filtered[df_filtered['is_win'] == 1]['driver_name'].value_counts().reset_index()
                 wins.columns = ['Driver', 'Wins']
-                fig_wins = px.bar(wins.head(10), x='Driver', y='Wins', title="Top 10 Drivers by Wins",
+                fig_wins = px.bar(wins.head(10), x='Driver', y='Wins', title="Top Drivers by Wins",
                                     color='Wins', color_continuous_scale='reds')
                 st.plotly_chart(fig_wins, use_container_width=True)
 
             with col2:
                 podiums = df_filtered[df_filtered['is_podium'] == 1]['constructor_name'].value_counts().reset_index()
                 podiums.columns = ['Constructor', 'Podiums']
-                fig_podiums = px.bar(podiums.head(10), x='Constructor', y='Podiums', title="Top 10 Constructors by Podiums",
+                fig_podiums = px.bar(podiums.head(10), x='Constructor', y='Podiums', title="Top Constructors by Podiums",
                                         color='Podiums', color_continuous_scale='blues')
                 st.plotly_chart(fig_podiums, use_container_width=True)
             
