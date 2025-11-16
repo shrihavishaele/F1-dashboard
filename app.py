@@ -109,7 +109,7 @@ st.set_page_config(
 )
 
 st.title("🏎️ F1 Data Analytics Dashboard")
-st.markdown("An interactive dashboard for exploring Formula 1 race data and applying machine learning models.")
+st.markdown("An interactive dashboard for exploring Formula 1 race data")
 
 # Load data
 df, drivers, constructors, circuits, races = load_data()
