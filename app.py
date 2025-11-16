@@ -429,13 +429,13 @@ if df is not None:
                             
                             st.dataframe(rules_display[['antecedents', 'consequents', 'support', 'confidence', 'lift']].sort_values(by='lift', ascending=False))
                             
-                            st.markdown("---")
-                            st.subheader("How to Read These Rules:")
-                            st.markdown("- **antecedents (IF)**: The item(s) on the left side of the rule.")
-                            st.markdown("- **consequents (THEN)**: The item(s) on the right side.")
-                            st.markdown("- **support**: How often this combination appears in the *entire dataset*.")
-                            st.markdown("- **confidence**: The probability of seeing {THEN} *when* {IF} is present. (e.g., 0.8 = 80% chance).")
-                            st.markdown("- **lift**: How much more likely {THEN} is, given {IF}. (Lift > 1 means the rule is interesting).")
+                            # st.markdown("---")
+                            # st.subheader("How to Read These Rules:")
+                            # st.markdown("- **antecedents (IF)**: The item(s) on the left side of the rule.")
+                            # st.markdown("- **consequents (THEN)**: The item(s) on the right side.")
+                            # st.markdown("- **support**: How often this combination appears in the *entire dataset*.")
+                            # st.markdown("- **confidence**: The probability of seeing {THEN} *when* {IF} is present. (e.g., 0.8 = 80% chance).")
+                            # st.markdown("- **lift**: How much more likely {THEN} is, given {IF}. (Lift > 1 means the rule is interesting).")
 
             except Exception as e:
                 st.error(f"An error occurred during Apriori analysis: {e}")
